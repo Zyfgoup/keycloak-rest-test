@@ -1,0 +1,25 @@
+server:
+  port: 11200
+logging:
+  level:
+    org: debug
+keycloak:
+  realm: SCPG #客户端所在的realm
+  credentials:
+    secret: bL1FRWuQuRmeQAffJXM8OBxwhdr34QEL
+  bearer-only: true
+  ssl-required: external
+  auth-server-url: http://47.102.192.4:8080 #keycloak授权服务器地址
+  resource: test-auth-client #客户端名称
+  #public-client: true #声明为一个公开的客户端
+  #use-resource-role-mappings: true  #为true使用应用级角色映射
+  security-constraints:
+    - auth-roles:
+        - view_role
+      security-collections:
+        - name: hello
+          patterns:
+            - '/*'
+  policy-enforcer-config:
+    enforcementMode: ENFORCING
+

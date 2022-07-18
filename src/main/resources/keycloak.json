@@ -1,0 +1,8 @@
+{
+  "realm": "SCPG",
+  "auth-server-url" : "http://47.102.192.4:8080",
+  "resource" : "test-auth-client",
+  "credentials": {
+    "secret": "bL1FRWuQuRmeQAffJXM8OBxwhdr34QEL"
+  }
+}
